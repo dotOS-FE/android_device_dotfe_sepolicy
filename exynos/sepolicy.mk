@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all exynos products
-# that inherit from Dot
+# that inherit from DotOS Fan Edition
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,14 +10,14 @@ endif
 endif
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/dot/sepolicy/exynos/private
+    device/dotfe/sepolicy/exynos/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/dot/sepolicy/exynos/dynamic \
-    device/dot/sepolicy/exynos/system
+    device/dotfe/sepolicy/exynos/dynamic \
+    device/dotfe/sepolicy/exynos/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/dot/sepolicy/exynos/dynamic \
-    device/dot/sepolicy/exynos/vendor
+    device/dotfe/sepolicy/exynos/dynamic \
+    device/dotfe/sepolicy/exynos/vendor
 endif
